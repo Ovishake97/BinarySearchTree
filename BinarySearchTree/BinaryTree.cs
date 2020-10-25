@@ -6,6 +6,8 @@ namespace BinarySearchTree
 {
     public class BinaryTree<T> where T : IComparable
     {
+        /// Binary tree class is created with a node data 
+        /// and two corresponding right and left trees 
         public T nodeData { get; set; }
         public BinaryTree<T> leftTree { get; set; }
         public BinaryTree<T> rightTree { get; set; }
@@ -19,6 +21,8 @@ namespace BinarySearchTree
             this.rightTree = null;
         }
 
+        /// Method compares the user given item with the node data and
+        /// accordingly it adds the data to the left or to the right tree
         public void Insert(T item)
         {
             T currentNodeValue = this.nodeData;
@@ -64,7 +68,7 @@ namespace BinarySearchTree
             }
 
         }
-
+        /// Gets the size of the tree
         public void GetSize()
         {
             Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
