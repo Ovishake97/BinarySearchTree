@@ -53,6 +53,39 @@ namespace BinarySearchTree
 
             }
         }
+        /// Method to search an element in a tree
+        /// by traversing through the left and right trees respectively
+
+        public void Search(T item)
+        {
+            T currentValue = this.nodeData;
+            int value = currentValue.CompareTo(item);
+            if (value == 0) {
+                Console.WriteLine("Found "+item);
+            }
+           else if (value > 0)
+            {
+                if (this.leftTree == null)
+                {
+                    Console.WriteLine(item+" not found");
+                }
+                else
+                    this.leftTree.Search(item);
+            }
+
+            else
+            {
+                if (this.rightTree == null)
+                {
+                    Console.WriteLine(item+" not found");
+                }
+                else
+                {
+                    this.rightTree.Search(item);
+                }
+
+            }
+        }
         public void Display()
         {
             if (this.leftTree != null)
