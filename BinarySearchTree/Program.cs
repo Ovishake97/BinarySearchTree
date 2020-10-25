@@ -19,7 +19,8 @@ namespace BinarySearchTree
             tree.Insert(65);
             tree.Insert(63);
             tree.Insert(67);
-            tree.Display();
+            tree.Search(63);
+            Console.ReadLine();
         }
     }
 
